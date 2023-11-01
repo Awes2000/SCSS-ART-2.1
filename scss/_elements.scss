@@ -1,0 +1,46 @@
+@mixin sea {
+  width: 100%;
+  height: 50%;
+  top: 50%;
+  background: radial-gradient(at 50% 0%, #7ad7e9, #004);
+  z-index: 60;
+}
+
+@mixin sun {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  left: 45%;
+  z-index: 40;
+  background: linear-gradient(#ff0, #d00);
+  box-shadow: 0 0 40px 6px #f20, 0 0 150px 10px #f33;
+  animation: rise 24s ease forwards;
+}
+
+@mixin light {
+  opacity: 0.5;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(at 50% 0%, #ff0, transparent);
+  z-index: 60;
+  animation: over 12s ease forwards;
+}
+
+@mixin sky {
+  opacity: 0.8;
+  width: 100%;
+  height: 50%;
+  top: 0;
+  background: radial-gradient(at 50% 70%, #ff7f00, #ff5500, #ff2a00, #ff0000);
+  z-index: 30;
+}
+
+@mixin wave {
+  margin: 26px 7px;
+  border-left: 3px solid transparent;
+  border-top: 6px solid rgba(50, 50, 140, 0.655);
+  border-right: 50px solid transparent;
+  transform: rotatez(6deg);
+  z-index: 60;
+}

@@ -1,0 +1,53 @@
+// birds.scss
+
+// Mixin for bird styles
+
+@mixin birdr {
+  z-index: 70;
+  opacity: 1;
+  top: 50px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: rotateZ(75deg);
+  margin: 0px 8px;
+  animation: mover 25s linear infinite, flap 0.5s linear alternate infinite;
+}
+
+@mixin bird1 {
+  opacity: 1;
+  top: 45px;
+  left: 0px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotateZ(-90deg);
+  animation: move 25s linear infinite 1.5s,
+    flap 0.5s linear alternate infinite 1.5s;
+  z-index: 70;
+}
+
+@mixin birdr1 {
+  z-index: 70;
+  opacity: 1;
+  top: 45px;
+  width: 10px;
+  height: 8px;
+  border: 2px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  transform: rotateZ(90deg);
+  margin: 0px 8px;
+  animation: mover 25s linear infinite 1.5s,
+    flap 0.5s linear alternate infinite 1.5s;
+}
