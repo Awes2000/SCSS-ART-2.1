@@ -1,0 +1,16 @@
+// sharks.scss
+
+// Shark-related variables
+$shark-color: #333;
+$shark-size: 20px;
+$shark-animation-duration: 20s;
+
+.shark {
+  background-color: $shark-color;
+  width: $shark-size;
+  height: $shark-size;
+  position: absolute;
+  // Add more common styles here
+}
+
+// Styles and animations for individual sharks (e.g., .shark-1, .shark-2)

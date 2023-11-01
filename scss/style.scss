@@ -1,0 +1,135 @@
+// main.scss
+
+@import "sharks";
+@import "birds";
+@import "elements";
+
+html {
+  background: black;
+  overflow: hidden;
+}
+
+.container,
+.sea,
+.sky,
+.sun,
+.light,
+.bird,
+.birdr1,
+.birdr,
+.fin,
+.wave {
+  position: absolute;
+}
+
+.container {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  margin-left: -50%;
+  margin-top: -200px;
+}
+
+.sky {
+  @include sky;
+}
+
+.sea {
+  @include sea;
+}
+
+.sun {
+  @include sun;
+}
+
+@keyframes rise {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: 15%;
+  }
+}
+
+.light {
+  @include light;
+}
+
+@keyframes over {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.bird {
+  @include bird-styles;
+}
+
+.birdr {
+  @include birdr;
+}
+
+.bird1 {
+  @include bird1;
+}
+
+.birdr1 {
+  @include birdr1;
+}
+
+.fin {
+  border: 30px solid black;
+  top: 90%;
+  left: 100%;
+  z-index: 100;
+  border-left: 30px solid transparent;
+  border-top: 0px solid transparent;
+  border-right: 10px solid transparent;
+  border-radius: 0px 0px 2px 10px;
+  animation: swim 30s linear forwards 10s;
+}
+
+.wave {
+  @include wave;
+}
+
+@keyframes swim {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -25%;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes mover {
+  0% {
+    left: -0px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes flap {
+  0% {
+    border-radius: 90%;
+  }
+  100% {
+    border-radius: 10%;
+  }
+}
